@@ -82,15 +82,15 @@ const CertificationsSection = () => {
                   {cert.icon}
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-gradient transition-all duration-300">
+                <h3 className="text-lg font-bold text-slate-100 group-hover:text-gradient transition-all duration-300">
                   {cert.title}
                 </h3>
 
-                <p className="text-gray-700 dark:text-black font-medium text-sm">
+                <p className="text-slate-300 font-medium text-sm">
                   {cert.issuer}
                 </p>
 
-                <p className="text-gray-600 dark:text-black text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed">
                   {cert.description}
                 </p>
 
@@ -104,7 +104,7 @@ const CertificationsSection = () => {
                     href={cert.file}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-3 py-2 border border-indigo-500 text-indigo-600 rounded-lg text-sm font-medium text-center hover:bg-indigo-600 hover:text-white transition"
+                    className="flex-1 px-3 py-2 border border-cyan-400/50 text-cyan-300 rounded-lg text-sm font-medium text-center hover:bg-cyan-500 hover:text-slate-950 transition"
                   >
                     View
                   </a>
@@ -113,7 +113,7 @@ const CertificationsSection = () => {
                     href="https://www.linkedin.com/in/b-nihanth-117407334/details/certifications/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-3 py-2 border border-green-500 text-green-600 rounded-lg text-sm font-medium text-center hover:bg-green-600 hover:text-white transition"
+                    className="flex-1 px-3 py-2 border border-purple-400/50 text-purple-300 rounded-lg text-sm font-medium text-center hover:bg-purple-500 hover:text-slate-950 transition"
                   >
                     Verify
                   </a>

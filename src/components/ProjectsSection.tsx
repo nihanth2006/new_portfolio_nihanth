@@ -76,11 +76,11 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 bg-gray-50">
+    <section id="projects" className="py-24 px-6 bg-transparent">
       <div className="container mx-auto max-w-7xl">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-4xl font-extrabold text-slate-100 mb-4">
             Featured Projects
           </h2>
         </div>
@@ -89,18 +89,18 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`p-8 rounded-xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+              className={`glass-card p-8 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1
               ${
                 project.special
-                  ? "bg-blue-100 border-blue-400 shadow-lg"
-                  : "bg-white border-gray-200"
+                  ? "border-cyan-400/40 shadow-lg"
+                  : ""
               }`}
             >
               <div className="space-y-6">
 
                 {/* Title */}
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-black">
+                  <h3 className="text-xl font-semibold text-slate-100">
                     {project.title}
                   </h3>
 
@@ -112,14 +112,14 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-black text-sm leading-relaxed">
+                <p className="text-slate-300 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Highlights */}
                 <ul className="space-y-2">
                   {project.highlights.map((h, i) => (
-                    <li key={i} className="text-sm text-black">
+                    <li key={i} className="text-sm text-slate-300">
                       • {h}
                     </li>
                   ))}
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-white text-black text-xs rounded-lg border"
+                      className="px-3 py-1 bg-slate-900/60 text-slate-100 text-xs rounded-lg border border-slate-700"
                     >
                       {tech}
                     </span>

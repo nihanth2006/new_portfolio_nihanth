@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 30 38% 92%;
-    --foreground: 20 40% 10%;
+    --background: 222 47% 9%;
+    --foreground: 210 40% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 20 40% 10%;
+    --card: 222 47% 12%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 40% 10%;
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 20 40% 37%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 188 94% 58%;
+    --primary-foreground: 222 47% 9%;
 
-    --secondary: 20 35% 65%;
-    --secondary-foreground: 20 40% 10%;
+    --secondary: 268 85% 67%;
+    --secondary-foreground: 210 40% 96%;
 
-    --muted: 20 20% 85%;
-    --muted-foreground: 20 20% 40%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 75%;
 
-    --accent: 20 40% 37%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 188 94% 58%;
+    --accent-foreground: 222 47% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 30% 80%;
-    --input: 20 30% 95%;
-    --ring: 20 40% 37%;
+    --border: 217 33% 18%;
+    --input: 222 32% 14%;
+    --ring: 188 94% 58%;
 
     --radius: 0.5rem;
   }
@@ -45,10 +45,10 @@
 
   body {
     @apply bg-background text-foreground;
-    background: #F5EBDD;
-    background-image: 
-      radial-gradient(circle at 20% 80%, rgba(139, 94, 60, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(164, 113, 72, 0.03) 0%, transparent 50%);
+    background:
+      radial-gradient(circle at top, rgba(34, 211, 238, 0.08), transparent 18%),
+      radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.06), transparent 16%),
+      linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
     min-height: 100vh;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
@@ -87,44 +87,44 @@
 @layer components {
   .glass {
     @apply backdrop-blur-lg border rounded-2xl;
-    background: rgba(255, 255, 255, 0.9);
-    border-color: #E6D5C3;
-    box-shadow: 0 2px 12px rgba(46, 31, 20, 0.08);
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(148, 163, 184, 0.12);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.35);
   }
   
   .glass-card {
     @apply backdrop-blur-xl border rounded-2xl;
-    background: #FFFFFF;
-    border-color: #E6D5C3;
-    box-shadow: 
-      0 1px 3px rgba(46, 31, 20, 0.08),
-      0 1px 2px rgba(46, 31, 20, 0.06),
-      0 0 0 1px rgba(139, 94, 60, 0.08);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.78));
+    border-color: rgba(148, 163, 184, 0.12);
+    box-shadow:
+      0 1px 3px rgba(15, 23, 42, 0.35),
+      0 1px 2px rgba(15, 23, 42, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .glass-card:hover {
-    background: #FFFFFF;
-    border-color: #A47148;
-    box-shadow: 
-      0 10px 30px rgba(46, 31, 20, 0.12),
-      0 4px 12px rgba(46, 31, 20, 0.08),
-      0 0 0 1px rgba(139, 94, 60, 0.15);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.88));
+    border-color: rgba(34, 211, 238, 0.35);
+    box-shadow:
+      0 10px 30px rgba(15, 23, 42, 0.45),
+      0 4px 12px rgba(15, 23, 42, 0.3),
+      0 0 0 1px rgba(34, 211, 238, 0.12);
     transform: translateY(-2px);
   }
   
   .neon-glow {
-    box-shadow: 0 0 20px rgba(139, 94, 60, 0.2);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.18);
     transition: box-shadow 0.3s ease;
   }
   
   .neon-glow:hover {
-    box-shadow: 0 0 30px rgba(139, 94, 60, 0.35);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.22);
   }
   
   .text-gradient {
     @apply bg-gradient-to-r bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #8B5E3C 0%, #A47148 100%);
+    background-image: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
     background-size: 200% 200%;
     animation: gradient-shift 3s ease-in-out infinite;
   }

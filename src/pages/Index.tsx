@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import ParticleBackground from '../components/ParticleBackground';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
+import ExperienceSection from '../components/ExperienceSection';
 import EducationSection from '../components/EducationSection';
 import ProjectsSection from '../components/ProjectsSection';
 import CertificationsSection from '../components/CertificationsSection';
@@ -14,6 +15,13 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  const timelineSlides = [
+    <ExperienceSection key="experience" />,
+    <EducationSection key="education" />,
+  ];
 
   useEffect(() => {
     if (!isLoading) {
@@ -99,6 +107,33 @@ const Index = () => {
     setIsLoading(false);
   };
 
+  const goToPreviousSlide = () => {
+    setActiveSlide((prev) => (prev === 0 ? timelineSlides.length - 1 : prev - 1));
+  };
+
+  const goToNextSlide = () => {
+    setActiveSlide((prev) => (prev === timelineSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX === null) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+
+    if (diff > 50) {
+      goToNextSlide();
+    } else if (diff < -50) {
+      goToPreviousSlide();
+    }
+
+    setTouchStartX(null);
+  };
+
   if (isLoading) {
     return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
   }
@@ -110,7 +145,61 @@ const Index = () => {
       <main className="relative z-10">
         <HeroSection />
         <AboutSection />
-        <EducationSection />
+        <section className="py-6 px-6">
+          <div className="container mx-auto max-w-7xl">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Career Timeline</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={goToPreviousSlide}
+                  className="rounded-full border border-slate-700 bg-slate-900/60 p-2 text-slate-100 transition hover:border-cyan-400"
+                  aria-label="Previous slide"
+                >
+                  ←
+                </button>
+                <button
+                  onClick={goToNextSlide}
+                  className="rounded-full border border-slate-700 bg-slate-900/60 p-2 text-slate-100 transition hover:border-cyan-400"
+                  aria-label="Next slide"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+
+            <div
+              className="overflow-hidden rounded-2xl"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+              >
+                {timelineSlides.map((slide, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    {slide}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 flex justify-center gap-2">
+              {timelineSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`h-2.5 rounded-full transition-all ${
+                    activeSlide === index ? 'w-8 bg-cyan-400' : 'w-2.5 bg-slate-600 hover:bg-slate-400'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
         <ProjectsSection />
         <CertificationsSection />
         <BlogSection />

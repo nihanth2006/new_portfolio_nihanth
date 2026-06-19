@@ -30,10 +30,10 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gradient stagger-item">
             B.Nihanth
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light text-black mb-6 stagger-item">
+          <h2 className="text-2xl md:text-3xl font-light text-slate-100 mb-6 stagger-item">
             {titles[currentTitleIndex]}
           </h2>
-          <p className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed stagger-item">
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed stagger-item">
             "Crafting Scalable Software. Engineering Smart Solutions."
           </p>
         </div>

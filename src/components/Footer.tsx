@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gradient">B.Nihanth</h3>
-            <p className="text-black leading-relaxed">
+            <p className="text-slate-300 leading-relaxed">
               Full Stack Developer passionate about creating scalable software solutions and mentoring the next generation of developers.
             </p>
           </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                     const element = document.getElementById(link.toLowerCase());
                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className={`inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium text-black bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-neon-cyan/20 ${index % 2 === 0 ? 'bg-neon-purple/15' : 'bg-neon-cyan/15'}`}
+                  className={`inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium text-slate-100 bg-slate-900/60 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-neon-cyan/20 ${index % 2 === 0 ? 'border border-neon-purple/20' : 'border border-neon-cyan/20'}`}
                 >
                   {link}
                 </button>
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Mail size={18} />
               </a>
             </div>
-            <div className="text-sm text-black">
+            <div className="text-sm text-slate-300">
               <p>nihanth1006@gmail.com</p>
               <p>+91 7794085626</p>
             </div>
@@ -68,10 +68,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-black text-sm">
+          <p className="text-slate-400 text-sm">
             © {currentYear} B.Nihanth. All rights reserved.
           </p>
-          <p className="text-black text-sm mt-4 md:mt-0">
+          <p className="text-slate-400 text-sm mt-4 md:mt-0">
             Built with React, TypeScript & Tailwind CSS
           </p>
         </div>

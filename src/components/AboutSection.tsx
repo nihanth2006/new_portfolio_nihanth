@@ -23,15 +23,15 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="glass-card p-8 neon-glow">
-              <p className="text-lg text-black leading-relaxed mb-6">
+              <p className="text-lg text-slate-200 leading-relaxed mb-6">
                 I'm <span className="text-cyan-400 font-semibold">B.Nihanth</span>, a passionate B.Tech Computer Science Engineering student from 
                 <span className="text-purple-400 font-semibold"> KL University</span> with a strong foundation in both backend and frontend development.
               </p>
-              <p className="text-lg text-black leading-relaxed mb-6">
+              <p className="text-lg text-slate-200 leading-relaxed mb-6">
                 My expertise spans across multiple technologies, from building robust server-side applications with Spring Boot to creating 
                 dynamic user interfaces with React. I'm particularly passionate about cloud computing and DevOps practices.
               </p>
-              <p className="text-lg text-black leading-relaxed">
+              <p className="text-lg text-slate-200 leading-relaxed">
                 I believe in writing clean, maintainable code and am always eager to learn new technologies and tackle challenging problems 
                 that make a real impact.
               </p>
@@ -39,7 +39,7 @@ const AboutSection = () => {
 
             <div className="glass-card p-8">
               <h3 className="text-2xl font-bold text-neon-purple mb-4">Leadership Impact</h3>
-              <div className="space-y-3 text-black">
+              <div className="space-y-3 text-slate-200">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-neon-cyan rounded-full"></div>
                   <span>Co-Founder & Mentor at Be One Community Student Club</span>
@@ -69,7 +69,7 @@ const AboutSection = () => {
                       {skillList.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 text-xs bg-white/10 border border-white/20 rounded-full text-black hover:text-white hover:border-neon-cyan transition-all duration-300"
+                          className="px-3 py-1 text-xs bg-slate-900/50 border border-slate-600 rounded-full text-slate-100 hover:text-white hover:bg-cyan-500/10 hover:border-neon-cyan transition-all duration-300"
                         >
                           {skill}
                         </span>

@@ -53,14 +53,14 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="glass-card p-8">
-            <h3 className="text-2xl font-bold text-black mb-6">
+            <h3 className="text-2xl font-bold text-slate-100 mb-6">
               Send a Message
             </h3>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-black mb-2"
+                  className="block text-sm font-medium text-slate-200 mb-2"
                 >
                   Name
                 </label>
@@ -71,7 +71,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/95 border border-gray-200 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-900/70 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300"
                   placeholder="Your Name"
                 />
               </div>
@@ -79,7 +79,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-black mb-2"
+                  className="block text-sm font-medium text-slate-200 mb-2"
                 >
                   Email
                 </label>
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/95 border border-gray-200 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-900/70 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-black mb-2"
+                  className="block text-sm font-medium text-slate-200 mb-2"
                 >
                   Message
                 </label>
@@ -109,7 +109,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-white/95 border border-gray-200 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-slate-900/70 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all duration-300 resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>
@@ -122,7 +122,7 @@ const ContactSection = () => {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
-            <div className="mt-10 text-center text-sm text-black italic">
+            <div className="mt-10 text-center text-sm text-slate-300 italic">
               💬 Feel free to reach out - even if it's just to say hello! I'm
               always open to conversations, collaborations and new ideas. ✨
             </div>
@@ -130,7 +130,7 @@ const ContactSection = () => {
 
           <div className="space-y-8">
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold text-black mb-6">
+              <h3 className="text-2xl font-bold text-slate-100 mb-6">
                 Contact Information
               </h3>
               <div className="space-y-6">
@@ -139,7 +139,7 @@ const ContactSection = () => {
                     <Mail size={20} />
                   </div>
                   <div>
-                    <p className="text-black text-sm">Email</p>
+                    <p className="text-slate-300 text-sm">Email</p>
                     <a
                       href="mailto:nihanth1006@gmail.com"
                       className="text-neon-cyan hover:text-neon-purple transition-colors duration-300"
@@ -154,7 +154,7 @@ const ContactSection = () => {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <p className="text-black text-sm">Phone</p>
+                    <p className="text-slate-300 text-sm">Phone</p>
                     <a
                       href="tel:+917794085626"
                       className="text-neon-cyan hover:text-neon-purple transition-colors duration-300"
@@ -167,8 +167,8 @@ const ContactSection = () => {
             </div>
 
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold text-black mb-6">Resume</h3>
-              <p className="text-black mb-6">
+              <h3 className="text-2xl font-bold text-slate-100 mb-6">Resume</h3>
+              <p className="text-slate-300 mb-6">
                 Download my complete resume to learn more about my experience,
                 skills, and achievements.
               </p>
@@ -185,10 +185,10 @@ const ContactSection = () => {
             </div>
 
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold text-black mb-6">
+              <h3 className="text-2xl font-bold text-slate-100 mb-6">
                 Let's Connect
               </h3>
-              <p className="text-black mb-6">
+              <p className="text-slate-300 mb-6">
                 I'm always open to discussing new opportunities, interesting
                 projects, or just having a chat about technology.
               </p>

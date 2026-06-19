@@ -68,7 +68,7 @@ const BlogSection = () => {
                   </div>
                   <div className="flex-1">
                     {/* ✅ FIXED */}
-                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-black mb-2">
+                    <div className="flex items-center gap-2 text-sm text-slate-400 mb-2">
                       <span>{post.date}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
@@ -76,12 +76,12 @@ const BlogSection = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gradient transition-all duration-300 line-clamp-2">
+                <h3 className="text-xl font-bold text-slate-100 group-hover:text-gradient transition-all duration-300 line-clamp-2">
                   {post.title}
                 </h3>
 
                 {/* ✅ FIXED */}
-                <p className="text-gray-700 dark:text-black text-sm leading-relaxed line-clamp-3">
+                <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">
                   {post.description}
                 </p>
 
@@ -89,7 +89,7 @@ const BlogSection = () => {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 text-xs bg-white/10 border border-white/20 rounded text-gray-700 dark:text-black"
+                      className="px-2 py-1 text-xs bg-slate-900/50 border border-slate-700 rounded text-slate-200"
                     >
                       {tag}
                     </span>
@@ -102,7 +102,7 @@ const BlogSection = () => {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 hover:text-indigo-800 font-medium text-sm flex items-center gap-2"
+                    className="text-cyan-300 hover:text-cyan-200 font-medium text-sm flex items-center gap-2"
                   >
                     Read More
                     <span>→</span>
@@ -110,10 +110,10 @@ const BlogSection = () => {
                 ) : (
                   <button
                     disabled
-                    className="text-gray-500 font-medium text-sm cursor-not-allowed flex items-center gap-2"
+                    className="text-slate-500 font-medium text-sm cursor-not-allowed flex items-center gap-2"
                   >
                     Coming Soon
-                    <span className="text-black">→</span>
+                    <span className="text-slate-300">→</span>
                   </button>
                 )}
               </div>
@@ -122,7 +122,7 @@ const BlogSection = () => {
         </div>
 
         {/* ✅ FIXED */}
-        <div className="text-center mt-12 text-gray-600 dark:text-black text-sm italic">
+        <div className="text-center mt-12 text-slate-400 text-sm italic">
           More posts coming soon...
         </div>
       </div>

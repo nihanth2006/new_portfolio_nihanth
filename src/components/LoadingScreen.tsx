@@ -80,7 +80,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
 
         <div className="w-80 max-w-full mx-auto">
           <div className="mb-4">
-            <p className="text-black text-sm animate-fade-in" style={{ animationDelay: '1s' }}>
+            <p className="text-slate-200 text-sm animate-fade-in" style={{ animationDelay: '1s' }}>
               {loadingText}
             </p>
           </div>
@@ -99,7 +99,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
 
         {progress >= 100 && (
           <div className="mt-6 animate-fade-in">
-            <p className="text-black text-sm">
+            <p className="text-slate-200 text-sm">
               "Engineering Smart Solutions"
             </p>
           </div>
